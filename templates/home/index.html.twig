@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - {{ parent() }}{% endblock %}
+
+{% block header_title %}Bienvenue{% endblock %}
+
+{% block content %}
+    <h2>Bienvenue sur notre application Symfony 7.3</h2>
+    <p>Cette application vous permet de nous contacter facilement grâce à notre formulaire de contact.</p>
+    
+    <h3>Fonctionnalités disponibles :</h3>
+    <ul>
+        <li>Formulaire de contact avec validation</li>
+        <li>Envoi d'emails vers contact@local.dev</li>
+        <li>Interface utilisateur moderne et responsive</li>
+    </ul>
+    
+    <p>
+        <a href="{{ path('contact') }}" class="btn btn-primary">Aller à la page de contact</a>
+    </p>
+{% endblock %}
