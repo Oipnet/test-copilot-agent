@@ -23,29 +23,29 @@ class ContactController extends AbstractController
             ->add('name', TextType::class, [
                 'label' => 'Nom',
                 'constraints' => [
-                    new Assert\NotBlank(['message' => 'Le nom est requis']),
-                    new Assert\Length(['max' => 100])
+                    new Assert\NotBlank(message: 'Le nom est requis'),
+                    new Assert\Length(max: 100)
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'constraints' => [
-                    new Assert\NotBlank(['message' => 'L\'email est requis']),
-                    new Assert\Email(['message' => 'Veuillez entrer un email valide'])
+                    new Assert\NotBlank(message: 'L\'email est requis'),
+                    new Assert\Email(message: 'Veuillez entrer un email valide')
                 ]
             ])
             ->add('subject', TextType::class, [
                 'label' => 'Sujet',
                 'constraints' => [
-                    new Assert\NotBlank(['message' => 'Le sujet est requis']),
-                    new Assert\Length(['max' => 200])
+                    new Assert\NotBlank(message: 'Le sujet est requis'),
+                    new Assert\Length(max: 200)
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
                 'constraints' => [
-                    new Assert\NotBlank(['message' => 'Le message est requis']),
-                    new Assert\Length(['max' => 1000])
+                    new Assert\NotBlank(message: 'Le message est requis'),
+                    new Assert\Length(max: 1000)
                 ]
             ])
             ->add('submit', SubmitType::class, [
