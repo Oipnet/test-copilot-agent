@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Accueil{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    {{ include('partials/header.html.twig') }}
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    {{ include('partials/footer.html.twig') }}
+
+    <script src="{{ asset('js/script.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

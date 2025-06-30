@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Notre Entreprise{% endblock %}
+
+{% block body %}
+    {{ include('partials/hero.html.twig') }}
+    {{ include('partials/services.html.twig') }}
+    {{ include('partials/pricing.html.twig') }}
+    {{ include('partials/cta.html.twig') }}
+    {{ include('partials/testimonials.html.twig') }}
+    {{ include('partials/contact.html.twig') }}
+{% endblock %}
